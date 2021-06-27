@@ -1,4 +1,4 @@
-# BST-BMX / https://bstbmx.fr/
+# BST-BMX : https://bstbmx.fr/
 
 Site réalisé bénévolement pour l'association de BMX de la ville de Bailleul-sur-Thérain.
 
