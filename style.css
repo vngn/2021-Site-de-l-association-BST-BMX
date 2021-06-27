@@ -1,0 +1,471 @@
+@charset "UTF-8";
+/* DOCUMENT INFORMATION
+    - Document: Site BST BMX
+    - Version : 1.0.1 du 02/02/2021
+    - Réalisé par: Vincent NGUYEN
+*/
+/* COLORS
+    - default body text     black
+    - h1                    black or white
+    - h2                    rgb(166, 0, 0)
+    - h3                    -
+    - h4                    -
+    - p                     black
+    - border:               rgb(166, 0, 0)          
+*/
+/* FONTS
+    - Default:              'roboto'
+*/
+/* CSS DIRECTORY
+    0.  GLOBAL
+    1.  HEADER
+    2.  PAGE ACCUEIL
+    3.  PAGE INFOS
+            3.1 news
+            3.2 agenda
+            3.3 sondage
+            3.4 la piste
+            3.5 coordonnees
+            3.6 contact
+            3.7 galerie
+            3.8 maillots
+    4.  PAGE LE CLUB
+            4.1 nos activités
+            4.2 historique du club
+            4.3 le bureau
+    5.  PAGE ADHESION
+            5.1 adhésions annuelles
+            5.2 horaires d'ouverture
+            5.3 licence
+    6.  PAGE INSCRIPTION COURSES
+            6.1 courses régionales
+            6.2 stages
+            6.3 vacances sportives
+    7.  PAGE VENTE-ACHAT DE MATERIELS
+            7.1 publication des annonces de ventes
+    8.  PAGE NOS PARTENAIRES
+            8.1 listes et liens
+    9.  FOOTER
+*/
+/* ============================== 0. GLOBAL ============================== */
+/* bases SASS */
+/* fin SASS */
+body {
+  color: black;
+  background-color: #c5c5c5;
+  font-family: roboto, arial;
+  width: 100%;
+}
+
+h1 {
+  font-weight: bold;
+  padding: 20px;
+}
+
+.h1white {
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+
+.h1black {
+  color: black;
+  text-shadow: 2px 2px 2px white;
+}
+
+h2 {
+  color: #a60000;
+  font-weight: bold;
+}
+
+p {
+  margin: 10px;
+}
+
+.lien {
+  color: blue;
+  text-decoration: underline;
+}
+
+.bloc-page {
+  margin: auto;
+  background-color: white;
+}
+
+.bloc-partie {
+  width: 90%;
+  max-width: 1000px;
+  font-weight: bold;
+  margin: auto;
+  margin-bottom: 200px;
+  background-color: white;
+  padding: 12px 20px;
+  border: 2px solid #a60000;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.bloc-meteo {
+  width: 250px;
+  min-width: 250px;
+  margin-left: 50px;
+}
+
+@media (max-width: 1280px) and (min-width: 991px) {
+  .bloc-meteo {
+    display: none;
+  }
+}
+
+@media (max-width: 990px) {
+  .bloc-meteo {
+    margin: center;
+  }
+}
+
+@media (max-width: 463px) {
+  .bloc-meteo {
+    display: none;
+  }
+}
+
+.id {
+  padding-top: 150px;
+  padding-bottom: 75px;
+}
+
+/* système de visionnage des photos */
+.modal-content {
+  width: 1070px;
+  height: 760px;
+  border-radius: 0;
+  margin: auto;
+}
+
+.modal {
+  position: fixed;
+  left: -260px;
+}
+
+@media (max-width: 1366px) {
+  .modal {
+    position: fixed;
+    left: 0px;
+  }
+}
+
+/* fin système de visionnage des photos */
+.p-modal {
+  text-align: center;
+}
+
+/* ============================== 1.  HEADER ============================== */
+.logo {
+  width: 60px;
+}
+
+.facebook-icon {
+  color: #087ae9;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 991px) {
+  .image-nav {
+    display: none;
+  }
+}
+
+/* ============================== 2.  PAGE ACCUEIL ============================== */
+.video {
+  margin-top: -27px;
+  background-color: black;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* ============================== 3.  PAGE INFOS ============================== */
+.fond-infos {
+  background-image: url("images/01b.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  background-attachment: fixed;
+  background-position-y: 70px;
+}
+
+.fond-titres-infos {
+  background-image: url("images/01.jpg");
+  height: 500px;
+  margin-top: 10px;
+  -webkit-box-shadow: inset 20px 20px 20px white, inset -20px -20px 20px white;
+          box-shadow: inset 20px 20px 20px white, inset -20px -20px 20px white;
+}
+
+/* 3.1 news */
+/* 3.2 agenda */
+.agenda-online {
+  width: 100%;
+  height: 50vh;
+  margin-bottom: 10px;
+}
+
+/* 3.3 sondage */
+/* 3.4 la piste */
+.photos-piste {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.photo {
+  margin: 0 10px 20px;
+  border-radius: 5px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.photo:hover {
+  -webkit-box-shadow: 0 0 20px grey;
+          box-shadow: 0 0 20px grey;
+}
+
+/* 3.5 coordonnees */
+.google-map {
+  width: 100%;
+  height: 50vh;
+  margin-bottom: 10px;
+}
+
+/* 3.6 contact */
+/* 3.7 galerie (+ voir 3.4 la piste) */
+.photos-galerie {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* 3.8 maillots (+ voir 3.4 la piste) */
+.photos-maillots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.taille-photo-maillot {
+  width: 220px;
+  margin-bottom: 10px;
+}
+
+/* ============================== 4.  PAGE LE CLUB ============================== */
+.fond-club {
+  background-image: url("images/02b.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  background-attachment: fixed;
+  background-position-y: 70px;
+}
+
+.fond-titres-club {
+  background-image: url("images/02.jpg");
+  height: 500px;
+  margin-top: 10px;
+  -webkit-box-shadow: inset 20px 20px 20px white, inset -20px -20px 20px white;
+          box-shadow: inset 20px 20px 20px white, inset -20px -20px 20px white;
+}
+
+.photo-page-club {
+  width: 100%;
+  margin: 10px 0;
+}
+
+/* 4.1 nos activités */
+/* 4.2 historique du club */
+.photo-affiche {
+  border: 1px solid black;
+}
+
+/* 4.3 le bureau */
+/* ============================== 5.  PAGE ADHESION ============================== */
+.fond-adhesions {
+  background-image: url("images/07b.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  background-attachment: fixed;
+  background-position-y: 70px;
+}
+
+.fond-titres-adhesions {
+  background-image: url("images/07.jpg");
+  height: 500px;
+  margin-top: 10px;
+  -webkit-box-shadow: inset 20px 20px 20px white, inset -20px -20px 20px white;
+          box-shadow: inset 20px 20px 20px white, inset -20px -20px 20px white;
+}
+
+/* 5.1 adhésions annuelles */
+.bloc-adhesion {
+  width: 100%;
+  text-align: center;
+}
+
+.image-adhesion {
+  width: 25%;
+  margin: 10px 20px 5px;
+  border: 1px solid black;
+}
+
+/* 5.2 horaires d'ouverture */
+/* 5.3 licence */
+.bloc-licence {
+  width: 100%;
+  text-align: center;
+}
+
+.image-licences {
+  width: 100%;
+  margin-bottom: 5px;
+  border: 1px solid black;
+}
+
+/* ============================== 6.  PAGE INSCRIPTION COURSES ============================== */
+.fond-courses {
+  background-image: url("images/15b.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  background-attachment: fixed;
+  background-position-y: 70px;
+}
+
+.fond-titres-courses {
+  background-image: url("images/15.jpg");
+  height: 500px;
+  margin-top: 10px;
+  -webkit-box-shadow: inset 20px 20px 20px white, inset -20px -20px 20px white;
+          box-shadow: inset 20px 20px 20px white, inset -20px -20px 20px white;
+}
+
+/* 6.1 courses régionales */
+/* 6.2 stages */
+/* 6.3 vacances sportives */
+/* ============================== 7.  PAGE VENTE-ACHAT DE MATERIELS ============================== */
+.fond-ventes-achats {
+  background-image: url("images/31b.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  background-attachment: fixed;
+  background-position-y: 70px;
+}
+
+.fond-titres-ventes-achats {
+  background-image: url("images/31.jpg");
+  height: 500px;
+  margin-top: 10px;
+  -webkit-box-shadow: inset 20px 20px 20px white, inset -20px -20px 20px white;
+          box-shadow: inset 20px 20px 20px white, inset -20px -20px 20px white;
+}
+
+/* 7.1 publication des annonces de ventes */
+.bloc-vente {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.articles-vente {
+  width: 220px;
+  margin-bottom: 10px;
+}
+
+/* ============================== 8.  PAGE NOS PARTENAIRES ============================== */
+.fond-partenaires {
+  background-image: url("images/c04b.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  background-attachment: fixed;
+  background-position-y: 70px;
+}
+
+.fond-titres-partenaires {
+  background-image: url("images/c04.jpg");
+  height: 500px;
+  margin-top: 10px;
+  -webkit-box-shadow: inset 20px 20px 20px white, inset -20px -20px 20px white;
+          box-shadow: inset 20px 20px 20px white, inset -20px -20px 20px white;
+}
+
+/* 8.1 listes et liens */
+.col-6 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  word-break: break-word;
+  text-align: center;
+}
+
+.partenaire-bloc {
+  margin: 50px auto;
+}
+
+.logo-partenaire {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* ============================== 9.  FOOTER ============================== */
+.footer {
+  background: linear-gradient(0.7turn, #000000, #a60000, #000000);
+  color: white;
+  padding: 25px 20px 20px;
+  text-align: center;
+  border-top: 1px solid white;
+}
+
+.agence {
+  color: goldenrod;
+  text-decoration: none;
+  font-weight: bold;
+}
+/*# sourceMappingURL=style.css.map */
